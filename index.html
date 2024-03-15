@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TULY EJOKENKO</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">
+            TULYYYYY
+        </div>
+
+        <div class="links">
+            <a target="_blank" href="https://twitter.com/tulyejokenkosol">TWITTARR</a>
+            <a target="_blank"
+                href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=38Ea1cGNcn1gFbtBxEb4u133mYiyiaRVA8NRaBrKz17R&fixed=out">CHOORT</a>
+            <a target="_blank" href="https://t.me/tulyejokenko">TELEGREM</a>
+        </div>
+
+        <div class="buy-button">
+            <button>
+                BUY $TULY
+            </button>
+        </div>
+    </div>
+
+    <div class="toly">
+        <img src="./assets/images/toly.png" alt="">
+    </div>
+
+    <div class="ca">
+        <input type="text" value="38Ea1cGNcn1gFbtBxEb4u133mYiyiaRVA8NRaBrKz17R" readonly>
+        <p class="hidden-ca">38Ea1cGNcn1gFbtBxEb4u133mYiyiaRVA8NRaBrKz17R</p>
+        <img src="./assets/icons/copy.svg" alt="">
+
+        <div class="toolpit">
+            <p>click to copy</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright &copy; 2024 | Powered by Tuly Ejokenko</p>
+    </div>
+
+    <script>
+        function copyTextToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function () {
+                console.log('Text copied to clipboard successfully!');
+            }, function (err) {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+
+        document.querySelector('.ca').addEventListener('click', function (event) {
+            let textToCopy = this.querySelector('p').textContent;
+            copyTextToClipboard(textToCopy);
+            let toolpit = this.querySelector('.toolpit');
+            toolpit.querySelector('p').textContent = 'Copied!';
+
+            toolpit.classList.add('visible');
+
+            setTimeout(() => {
+                toolpit.classList.remove('visible');
+                setTimeout(() => {
+                    toolpit.querySelector('p').textContent = 'Click to copy';
+                }, 500);
+            }, 2000);
+        });
+    </script>
+
+</body>
+
+</html>
