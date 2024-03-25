@@ -109,7 +109,9 @@ a {
 }
 
 .ca input {
-    width: 100%;
+    font-size: 13px;
+    width: 350px;
+    text-align: center;
 }
 
 .hidden-ca {

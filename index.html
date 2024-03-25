@@ -16,19 +16,19 @@
 
     <div class="header">
         <div class="logo">
-            TULYYYYY
+            TULY®
         </div>
 
         <div class="links">
             <a target="_blank" href="https://twitter.com/tulyejokenkosol">TWITTARR</a>
             <a target="_blank"
-                href="https://dexscreener.com/solana/38Ea1cGNcn1gFbtBxEb4u133mYiyiaRVA8NRaBrKz17R">CHOORT</a>
+                href="https://dexscreener.com/solana/8u97uRcDkggEzkAhi9zNjqrBuZmLEf1vEEt5w4imKRFg">CHOORT</a>
             <a target="_blank" href="https://t.me/tulyejokenko">TELEGREM</a>
         </div>
 
         <div class="buy-button">
             <a target="_blank"
-                href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=38Ea1cGNcn1gFbtBxEb4u133mYiyiaRVA8NRaBrKz17R&fixed=out">
+                href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=8u97uRcDkggEzkAhi9zNjqrBuZmLEf1vEEt5w4imKRFg&fixed=out">
                 <button>
                     BUY $TULY
                 </button>
@@ -41,8 +41,8 @@
     </div>
 
     <div class="ca">
-        <input type="text" value="38Ea1cGNcn1gFbtBxEb4u133mYiyiaRVA8NRaBrKz17R" readonly>
-        <p class="hidden-ca">38Ea1cGNcn1gFbtBxEb4u133mYiyiaRVA8NRaBrKz17R</p>
+        <input type="text" value="8u97uRcDkggEzkAhi9zNjqrBuZmLEf1vEEt5w4imKRFg" readonly>
+        <p class="hidden-ca">8u97uRcDkggEzkAhi9zNjqrBuZmLEf1vEEt5w4imKRFg</p>
         <img src="./assets/icons/copy.svg" alt="">
 
         <div class="toolpit">
@@ -53,6 +53,8 @@
     <div class="footer">
         <p>Copyright &copy; 2024 | Powered by Tuly Ejokenko</p>
     </div>
+
+    <audio id="myAudio" src="pump.mp3"></audio>
 
     <script>
         function copyTextToClipboard(text) {
@@ -77,6 +79,16 @@
                     toolpit.querySelector('p').textContent = 'Click to copy';
                 }, 500);
             }, 2000);
+        });
+
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+            audio.volume = 0.25;
+        }
+
+        document.addEventListener('click', function (event) {
+            playAudio();
         });
     </script>
 
