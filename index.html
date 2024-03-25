@@ -10,6 +10,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <style>
+        .bouncing-image {
+            position: absolute;
+            transition: transform 1s ease-in-out;
+            top:0;
+            left: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -54,6 +62,8 @@
         <p>Copyright &copy; 2024 | Powered by Tuly Ejokenko</p>
     </div>
 
+    <img src="./123.png" class="bouncing-image" alt="" width="200" height="200">
+
     <audio id="myAudio" src="pump.mp3"></audio>
 
     <script>
@@ -90,6 +100,29 @@
         document.addEventListener('click', function (event) {
             playAudio();
         });
+
+        // Function to get a random number between min and max
+        function getRandomNumber(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        // Function to animate the image between random points
+        function animateImage() {
+            var image = document.querySelector('.bouncing-image');
+            var maxX = window.innerWidth - image.clientWidth;
+            var maxY = window.innerHeight - image.clientHeight;
+
+            console.log(maxX, maxY)
+            var newX = getRandomNumber(0, maxX);
+            var newY = getRandomNumber(0, maxY);
+            image.style.transform = `translate(${newX}px, ${newY}px)`;
+        }
+
+        // Call animateImage function initially
+        animateImage();
+
+        // Call animateImage function every 2 seconds
+        setInterval(animateImage, 2000);
     </script>
 
 </body>
