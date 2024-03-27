@@ -23,9 +23,7 @@
 <body>
 
     <div class="header">
-        <div class="logo">
-            TULY®
-        </div>
+
 
         <div class="links">
             <a target="_blank" href="https://twitter.com/tulyejokenkosol">TWITTARR</a>
@@ -34,37 +32,22 @@
             <a target="_blank" href="https://t.me/tulyejokenko">TELEGREM</a>
         </div>
 
-        <div class="buy-button">
-            <a target="_blank"
-                href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=8u97uRcDkggEzkAhi9zNjqrBuZmLEf1vEEt5w4imKRFg&fixed=out">
-                <button>
-                    BUY $TULY
-                </button>
-            </a>
-        </div>
+
     </div>
 
     <div class="toly">
         <img src="./assets/images/toly.png" alt="">
     </div>
 
-    <div class="ca">
-        <input type="text" value="8u97uRcDkggEzkAhi9zNjqrBuZmLEf1vEEt5w4imKRFg" readonly>
-        <p class="hidden-ca">8u97uRcDkggEzkAhi9zNjqrBuZmLEf1vEEt5w4imKRFg</p>
+    <!-- <div class="ca">
+        <input type="text" value="" readonly>
+        <p class="hidden-ca"></p>
         <img src="./assets/icons/copy.svg" alt="">
 
         <div class="toolpit">
             <p>click to copy</p>
         </div>
-    </div>
-
-    <div class="footer">
-        <p>Copyright &copy; 2024 | Powered by Tuly Ejokenko</p>
-    </div>
-
-    <img src="./123.png" class="bouncing-image" alt="" width="200" height="200">
-
-    <audio id="myAudio" src="pump.mp3"></audio>
+    </div> -->
 
     <script>
         function copyTextToClipboard(text) {
@@ -90,39 +73,6 @@
                 }, 500);
             }, 2000);
         });
-
-        function playAudio() {
-            var audio = document.getElementById("myAudio");
-            audio.play();
-            audio.volume = 0.25;
-        }
-
-        document.addEventListener('click', function (event) {
-            playAudio();
-        });
-
-        // Function to get a random number between min and max
-        function getRandomNumber(min, max) {
-            return Math.random() * (max - min) + min;
-        }
-
-        // Function to animate the image between random points
-        function animateImage() {
-            var image = document.querySelector('.bouncing-image');
-            var maxX = window.innerWidth - image.clientWidth;
-            var maxY = window.innerHeight - image.clientHeight;
-
-            console.log(maxX, maxY)
-            var newX = getRandomNumber(0, maxX);
-            var newY = getRandomNumber(0, maxY);
-            image.style.transform = `translate(${newX}px, ${newY}px)`;
-        }
-
-        // Call animateImage function initially
-        animateImage();
-
-        // Call animateImage function every 2 seconds
-        setInterval(animateImage, 2000);
     </script>
 
 </body>

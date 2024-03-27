@@ -13,8 +13,8 @@
 }
 
 body {
-    background: linear-gradient(to right, #9945FF, #14F195);
-
+    background: black;
+    color: white;
     height: 100vh;
     width: 100vw;
 
@@ -28,7 +28,7 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 .toly {
@@ -45,7 +45,9 @@ a {
 
 .header {
     position: fixed;
-
+    flex-direction: column;
+    gap: 12px;
+    
     top: 0;
     left: 0;
 
@@ -56,11 +58,6 @@ a {
     align-items: center;
 
     padding: 20px;
-}
-
-.links {
-    display: flex;
-    gap: 18px;
 }
 
 .buy-button button {
@@ -140,6 +137,12 @@ a {
     background-color: transparent;
 }
 
+.links {
+    display: flex;
+    gap: 12px;
+}
+
+
 @media (max-width: 992px) {
     *,
     *::before,
@@ -156,16 +159,6 @@ a {
         display: none;
     }
 
-    .links {
-        display: flex;
-        gap: 12px;
-    }
-
-    .header {
-        flex-direction: column;
-        gap: 12px;
-    }
-    
     iframe {
         width: 100%;
         height: 100%;
